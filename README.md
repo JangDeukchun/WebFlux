@@ -60,5 +60,4 @@ Kotlin 및 코루틴을 사용하여 Spring WebFlux 프로젝트를 설정하고
 
 ### Chapter 3: 03-using-functinal-endpoints
 - [Chapter 3 브랜치로 이동](https://github.com/GiWoonHwang/WebFlux/tree/03-using-functinal-endpoints)
-...
 
