@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9b80a99d-963f-472c-ba0b-408084585d05" name="Changes" comment="ReadMugiSevicTest에서 mugisTEST nullPoint 예외 발생&#10;ReadMugiRouterTest에서 allmugisTEST nullPoint 예외 발생">
+      <change beforePath="$PROJECT_DIR$/dustin/src/main/kotlin/io/dustin/api/router/mugi/ReadMugiHandler.kt" beforeDir="false" afterPath="$PROJECT_DIR$/dustin/src/main/kotlin/io/dustin/api/router/mugi/ReadMugiHandler.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dustin/src/main/kotlin/io/dustin/api/router/user/ReadUserHandler.kt" beforeDir="false" afterPath="$PROJECT_DIR$/dustin/src/main/kotlin/io/dustin/api/router/user/ReadUserHandler.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dustin/src/main/kotlin/io/dustin/api/usercase/mugi/ReadMugiUseCase.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dustin/src/main/kotlin/io/dustin/api/usercase/mugi/WriteMugiUseCase.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dustin/src/main/kotlin/io/dustin/api/usercase/user/ReadUserUseCase.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dustin/src/main/kotlin/io/dustin/api/usercase/user/WriteUserUseCase.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dustin/src/main/kotlin/io/dustin/common/transaction/Transaction.kt" beforeDir="false" afterPath="$PROJECT_DIR$/dustin/src/main/kotlin/io/dustin/common/transaction/Transaction.kt" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$/dustin">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$/dustin">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Kotlin Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2Yy8E8Z5MA7ofaUUUY1gQoOBMo8" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RunManager" selected="Gradle.ReadMugiRouterTest.allmugisTEST">
+    <configuration name="ReadMugiRouterTest.allmugisTEST" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/dustin" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;io.dustin.api.router.mugi.ReadMugiRouterTest.allmugisTEST&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="ReadMugiRouterTest.mugiByUserIdTEST" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/dustin" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;io.dustin.api.router.mugi.ReadMugiRouterTest.mugiByUserIdTEST&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="ReadMugiRouterTest.recordByIdTEST" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/dustin" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;io.dustin.api.router.mugi.ReadMugiRouterTest.recordByIdTEST&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="ReadMugiServiceTest.mugisTEST (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/dustin" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;io.dustin.domain.mugi.service.ReadMugiServiceTest.mugisTEST&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="DustinApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="dustin.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="io.dustin.DustinApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.dustin.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.ReadMugiRouterTest.allmugisTEST" />
+        <item itemvalue="Spring Boot.DustinApplication" />
+        <item itemvalue="Gradle.ReadMugiRouterTest.mugiByUserIdTEST" />
+        <item itemvalue="Gradle.ReadMugiRouterTest.recordByIdTEST" />
+        <item itemvalue="Gradle.ReadMugiServiceTest.mugisTEST (1)" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9b80a99d-963f-472c-ba0b-408084585d05" name="Changes" comment="서비스부분 테스트코드 재작성, RouterConfiguration 작성해야함" />
+      <created>1701486346145</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1701486346145</updated>
+      <workItem from="1701486347439" duration="9956000" />
+      <workItem from="1701566255262" duration="2077000" />
+      <workItem from="1701569897892" duration="502000" />
+    </task>
+    <task id="LOCAL-00001" summary="서비스부분 테스트코드 재작성, RouterConfiguration 작성해야함">
+      <option name="closed" value="true" />
+      <created>1701486681947</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1701486681947</updated>
+    </task>
+    <task id="LOCAL-00002" summary="ReadMugiSevicTest에서 mugisTEST nullPoint 예외 발생&#10;ReadMugiRouterTest에서 allmugisTEST nullPoint 예외 발생">
+      <option name="closed" value="true" />
+      <created>1701500688919</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1701500688919</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="03-using-functinal-endpoints" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="서비스부분 테스트코드 재작성, RouterConfiguration 작성해야함" />
+    <MESSAGE value="ReadMugiSevicTest에서 mugisTEST nullPoint 예외 발생&#10;ReadMugiRouterTest에서 allmugisTEST nullPoint 예외 발생" />
+    <option name="LAST_COMMIT_MESSAGE" value="ReadMugiSevicTest에서 mugisTEST nullPoint 예외 발생&#10;ReadMugiRouterTest에서 allmugisTEST nullPoint 예외 발생" />
+  </component>
+</project>
