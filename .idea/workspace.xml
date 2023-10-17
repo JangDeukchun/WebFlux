@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <list default="true" id="9b80a99d-963f-472c-ba0b-408084585d05" name="Changes" comment="ReadMugiSevicTest에서 mugisTEST nullPoint 예외 발생&#10;ReadMugiRouterTest에서 allmugisTEST nullPoint 예외 발생">
       <change beforePath="$PROJECT_DIR$/dustin/src/main/kotlin/io/dustin/api/router/mugi/ReadMugiHandler.kt" beforeDir="false" afterPath="$PROJECT_DIR$/dustin/src/main/kotlin/io/dustin/api/router/mugi/ReadMugiHandler.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dustin/src/main/kotlin/io/dustin/api/router/user/ReadUserHandler.kt" beforeDir="false" afterPath="$PROJECT_DIR$/dustin/src/main/kotlin/io/dustin/api/router/user/ReadUserHandler.kt" afterDir="false" />
@@ -17,6 +18,11 @@
 =======
     <list default="true" id="51b4ca6e-d413-45ee-b217-f1f4b27699f4" name="Changes" comment="" />
 >>>>>>> 01f1fca (정리)
+=======
+    <list default="true" id="51b4ca6e-d413-45ee-b217-f1f4b27699f4" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
+>>>>>>> 97979f8 (readme update)
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
