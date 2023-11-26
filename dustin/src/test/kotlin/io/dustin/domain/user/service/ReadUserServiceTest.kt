@@ -22,7 +22,7 @@ class ReadUserServiceTest @Autowired constructor(
     @DisplayName("fetch user by id")
     fun userByIdTEST() {
         // given
-        val id = 3L
+        val id = 15L
 
         // when
         val selected = read.userById(id)
@@ -30,7 +30,7 @@ class ReadUserServiceTest @Autowired constructor(
         // then
         selected.`as`(StepVerifier::create)
             .assertNext {
-                assertThat(it.name).isEqualTo("dustin hwang ")
+                assertThat(it.name).isEqualTo("서현식")
             }
             .verifyComplete()
     }
@@ -40,7 +40,7 @@ class ReadUserServiceTest @Autowired constructor(
     fun userByIdOrThrowTEST() {
         // given
         //val id = 1L
-        val id = 3L
+        val id = 15L
 
         // when
         val selected = read.userByIdOrThrow(id)
@@ -48,7 +48,7 @@ class ReadUserServiceTest @Autowired constructor(
         // then
         selected.`as`(StepVerifier::create)
             .assertNext {
-                assertThat(it.name).isEqualTo("dustin hwang ")
+                assertThat(it.name).isEqualTo("서현식")
             }
             .verifyComplete()
     }
@@ -62,7 +62,7 @@ class ReadUserServiceTest @Autowired constructor(
         // then
         count.`as`(StepVerifier::create)
             .assertNext {
-                assertThat(it).isEqualTo(1)
+                assertThat(it).isEqualTo(4)
             }
             .verifyComplete()
     }
@@ -78,7 +78,7 @@ class ReadUserServiceTest @Autowired constructor(
         val match = query(Criteria.from(list))
 
         // when
-        val musicians: Flux<String> = read.usersByQuery(
+        val users: Flux<String> = read.usersByQuery(
             // page 0, size 2
             match.limit(2)
                 .offset(0)
@@ -88,9 +88,9 @@ class ReadUserServiceTest @Autowired constructor(
             }
 
         // then
-        musicians.`as`(StepVerifier::create)
-            .expectNext("dustin hwang ")
-            //.expectNext("John Coltrane")
+        users.`as`(StepVerifier::create)
+            .expectNext("한동근")
+                .expectNext("슈퍼서현식")
             .verifyComplete()
 
     }
@@ -99,7 +99,7 @@ class ReadUserServiceTest @Autowired constructor(
     @DisplayName("total user count by query test")
     fun totalCountByQueryTEST() {
         // given
-        val match = query(where("name").like("%dustin%"))
+        val match = query(where("name").like("%식"))
 
         // when
         val count: Mono<Long> = read.totalCountByQuery(match)
@@ -108,7 +108,7 @@ class ReadUserServiceTest @Autowired constructor(
         count.`as`(StepVerifier::create)
             .assertNext {
                 // 현재 1개의 row가 있다.
-                assertThat(it).isEqualTo(1)
+                assertThat(it).isEqualTo(2)
             }
             .verifyComplete()
     }

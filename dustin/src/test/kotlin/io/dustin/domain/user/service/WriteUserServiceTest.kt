@@ -21,53 +21,50 @@ import reactor.test.StepVerifier
     mergeMode = TestExecutionListeners.MergeMode.MERGE_WITH_DEFAULTS
 )
 class WriteUserServiceTest @Autowired constructor(
-    private val read: ReadUserService,
-    private val write: WriteUserService,
+        private val read: ReadUserService,
+        private val write: WriteUserService,
 ) {
 
     @Test
     @DisplayName("user create test")
     fun createUserTEST() {
         // given
-        val createdUser = User(name = "dustin2", job = Job.Dojuk)
+        val createdUser = User(name = "서현식", job = Job.DOJUK)
 
         // when
         val mono = write.create(createdUser)
 
         // then
-//        mono.`as`(Transaction::withRollback)
-//            .`as`(StepVerifier::create)
-//            .assertNext {
-//                assertThat(it.id).isGreaterThan(0L)
-//            }
-//            .verifyComplete()
+        mono.`as`(StepVerifier::create)
+                .assertNext {
+                    assertThat(it.id).isGreaterThan(0L)
+                }
+                .verifyComplete()
     }
 
-    /**
-     *
-     */
+
     @Test
     @DisplayName("user update using builder test")
-    fun updateTemplateUserTEST() {
+    fun updateUserTEST() {
         // given
-        val id = 3L
+        val id = 1L
 
-        val command = UpdateUser(name = "dustin hwang ", job = Job.Junsa)
-        //val command = UpdateUser(null, null)
+        val command = UpdateUser(name = "서현식", job = Job.DOJUK.name)
 
-        val target = read.userByIdOrThrow(3)
+        val target = read.userByIdOrThrow(id)
 
         // when
         val updated = target.flatMap {
             val (user, assignments) = command.createAssignments(it)
             write.update(user, assignments)
-        }.then(read.userById(3))
+        }.then(read.userById(15))
 
         // then
         updated.`as`(StepVerifier::create)
-            .assertNext {
-                assertThat(it.job).isEqualTo(Job.Junsa)
-            }
-            .verifyComplete()
+                .assertNext {
+                    assertThat(it.job).isEqualTo(Job.DOJUK)
+                }
+                .verifyComplete()
     }
+
 }

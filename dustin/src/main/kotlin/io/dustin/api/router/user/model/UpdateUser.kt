@@ -8,9 +8,9 @@ import isParamBlankThrow
 import org.springframework.data.relational.core.sql.SqlIdentifier
 
 data class UpdateUser(
-    val name: String? = null,
-    @field:EnumCheck(enumClazz = Job::class, permitNull = true, message = "job 필드는 Junsa, Dojuk, Mabupsa, Gungsu, CLASSIC 만 가능합니다.")
-    val job: String? = null,
+        val name: String? = null,
+        @field:EnumCheck(enumClazz = Job::class, permitNull = true, message = "job 필드는 Junsa, Dojuk, Mabupsa, Gungsu 만 가능합니다.")
+        val job: String? = null,
 ) {
     fun createAssignments(user: User): Pair<User, MutableMap<SqlIdentifier, Any>> {
         val assignments = mutableMapOf<SqlIdentifier, Any>()
@@ -24,7 +24,7 @@ data class UpdateUser(
             user.job = Job.valueOf(it.uppercase())
         }
         if(assignments.isEmpty()) {
-            throw BadParameterException("업데이트 정보가 누락되었습니다. [name, genre] 정보를 확인하세요.")
+            throw BadParameterException("업데이트 정보가 누락되었습니다. [name, job] 정보를 확인하세요.")
         }
         return user to assignments
     }
