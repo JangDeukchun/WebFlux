@@ -5,6 +5,8 @@ import io.r2dbc.proxy.core.QueryExecutionInfo
 import io.r2dbc.proxy.listener.ProxyExecutionListener
 import io.r2dbc.proxy.support.QueryExecutionInfoFormatter
 
+
+
 class QueryLoggingListener: ProxyExecutionListener {
 
     private val log = logger<QueryLoggingListener>()

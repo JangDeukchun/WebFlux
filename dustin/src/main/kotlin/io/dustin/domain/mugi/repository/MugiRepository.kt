@@ -23,7 +23,7 @@ interface MugiRepository: R2dbcRepository<Mugi, Long>, CustomMugiRepository {
                    mugi.*
               FROM mugi
               INNER JOIN user
-              ON mugi.user_id = user_id
+              ON mugi.user_id = user.id
         """)
     fun findMugis(): Flux<Mugi>
 

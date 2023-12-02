@@ -4,6 +4,7 @@ import io.dustin.common.builder.createNativeSortLimitClause
 import io.dustin.common.builder.createNativeWhereClause
 import io.dustin.common.model.request.QueryPage
 import io.dustin.common.utils.searchMatrixVariable
+import io.dustin.domain.mugi.model.Mugi
 import io.dustin.domain.mugi.service.ReadMugiService
 import io.dustin.domain.user.service.ReadUserService
 import org.springframework.data.domain.Page
@@ -24,7 +25,7 @@ class ReadMugiHandler(
         val id = request.pathVariable("id").toLong()
         return ServerResponse.ok()
             .contentType(MediaType.APPLICATION_JSON)
-            .body(read.mugiByIdOrThrow(id, "id [$id]로 조회되는 무기가 없습니다."), Record::class.java)
+            .body(read.mugiByIdOrThrow(id, "id [$id]로 조회되는 무기가 없습니다."), Mugi::class.java)
     }
 
     fun mugiByUserId(request: ServerRequest): Mono<ServerResponse> {
@@ -50,13 +51,13 @@ class ReadMugiHandler(
         val queryPage = QueryPage.fromServerResponse(request)
         val matrixVariables = searchMatrixVariable(request)
         val prefix = "mugi"
-        val clazz = Record::class
+        val clazz = Mugi::class
         val whereClause = createNativeWhereClause(prefix, clazz, matrixVariables)
         val (orderSql, limitSql) = createNativeSortLimitClause(prefix, clazz, queryPage)
         val flux =  read.allMugis(whereClause = whereClause, orderClause = orderSql, limitClause = limitSql)
         return ServerResponse.ok()
             .contentType(MediaType.APPLICATION_JSON)
-            .body(flux, Record::class.java)
+            .body(flux, Mugi::class.java)
     }
 
 }

@@ -16,8 +16,7 @@ class ReadMugiServiceTest @Autowired constructor(
     @DisplayName("mugi by id test")
     fun mugiByIdTEST() {
         // given
-        //val id = 2L
-        val id = 1L
+        val id = 2L
 
         // when
         val mono = read.mugiByIdOrThrow(id)
@@ -43,7 +42,7 @@ class ReadMugiServiceTest @Autowired constructor(
 
         // then
         flux.`as`(StepVerifier::create)
-            .expectNext("Nows The Time")
+            .expectNext("Bird At St. Nick's")
             .verifyComplete()
     }
 
@@ -59,22 +58,20 @@ class ReadMugiServiceTest @Autowired constructor(
 
         // then
         count.`as`(StepVerifier::create)
-            .expectNext(2)
+            .expectNext(4)
             .verifyComplete()
     }
 
     @Test
     @DisplayName("mugis by converter test")
     fun mugisTEST() {
-        // given
 
         // when
         val flux = read.mugis().map { it.user?.name }.take(1)
-        println("flux    " + flux)
-
+        println("flux" + flux)
         // then
         flux.`as`(StepVerifier::create)
-            .expectNext("dustin")
+            .expectNext("한동근")
             .verifyComplete()
     }
 

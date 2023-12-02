@@ -15,7 +15,7 @@ import reactor.kotlin.core.publisher.toMono
 import java.net.URI
 
 @Service
-class WriteUserHanlder(
+class WriteUserHandler(
     private val read: ReadUserService,
     private val write: WriteUserService,
 ) {

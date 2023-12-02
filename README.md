@@ -9,8 +9,11 @@
     업무 외에 시간도 업무한다. 언제 업데이트하지 ?
 
     11/25
-    서비스부분 테스트코드 재작성, RouterConfiguration 작성중 
-    
+    서비스부분 테스트코드 재작성, RouterConfiguration 작성중
+
+    12/02
+    ReadMugiSevicTest에서 mugisTEST nullPoint 예외 발생
+    ReadMugiRouterTest에서 allmugisTEST nullPoint 예외 발생
 
 
 
