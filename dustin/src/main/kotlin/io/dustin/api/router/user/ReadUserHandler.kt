@@ -16,13 +16,14 @@ import reactor.core.publisher.Mono
 
 @Service
 class ReadUserHandler(
-    private val read: ReadUserService,
+        private val read: ReadUserService,
 ) {
+
     fun userById(request: ServerRequest): Mono<ServerResponse> {
         val id = request.pathVariable("id").toLong()
         return ServerResponse.ok()
-            .contentType(MediaType.APPLICATION_JSON)
-            .body(read.userByIdOrThrow(id, "id [$id]로 조회되는 유저가 없습니다."), User::class.java)
+                .contentType(MediaType.APPLICATION_JSON)
+                .body(read.userByIdOrThrow(id, "id [$id]로 조회되는 유저가 없습니다."), User::class.java)
     }
 
     fun userByQuery(request: ServerRequest): Mono<ServerResponse> {
@@ -30,12 +31,12 @@ class ReadUserHandler(
         val matrixVariables = searchMatrixVariable(request)
         val match = createQuery(matrixVariables)
         val page = read.usersByQuery(queryPage.pagination(match))
-            .collectList()
-            .zipWith(read.totalCountByQuery(queryPage.pagination(match)))
-            .map { tuple -> PageImpl(tuple.t1, queryPage.fromPageable(), tuple.t2) }
+                .collectList()
+                .zipWith(read.totalCountByQuery(queryPage.pagination(match)))
+                .map { tuple -> PageImpl(tuple.t1, queryPage.fromPageable(), tuple.t2) }
         return ServerResponse.ok()
-            .contentType(MediaType.APPLICATION_JSON)
-            .body(page, Page::class.java)
+                .contentType(MediaType.APPLICATION_JSON)
+                .body(page, Page::class.java)
     }
 
 }

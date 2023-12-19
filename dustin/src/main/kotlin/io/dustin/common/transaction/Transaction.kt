@@ -14,7 +14,7 @@ import reactor.core.publisher.Mono
  */
 @Component
 class Transaction(
-    transactionalOperator: TransactionalOperator
+        transactionalOperator: TransactionalOperator
 ) {
     init {
         Companion.transactionalOperator = transactionalOperator

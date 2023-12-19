@@ -17,15 +17,15 @@ import reactor.core.publisher.Mono
 
 @Service
 class ReadMugiHandler(
-    private val read: ReadMugiService,
-    private val readUser: ReadUserService,
+        private val read: ReadMugiService,
+        private val readUser: ReadUserService,
 ) {
 
     fun mugiById(request: ServerRequest): Mono<ServerResponse> {
         val id = request.pathVariable("id").toLong()
         return ServerResponse.ok()
-            .contentType(MediaType.APPLICATION_JSON)
-            .body(read.mugiByIdOrThrow(id, "id [$id]로 조회되는 무기가 없습니다."), Mugi::class.java)
+                .contentType(MediaType.APPLICATION_JSON)
+                .body(read.mugiByIdOrThrow(id, "id [$id]로 조회되는 무기가 없습니다."), Mugi::class.java)
     }
 
     fun mugiByUserId(request: ServerRequest): Mono<ServerResponse> {
@@ -34,30 +34,30 @@ class ReadMugiHandler(
         val user = readUser.userByIdOrThrow(userId)
         val page = user.flatMapMany { entity ->
             read.mugiByUserId(userId, queryPage.fromPageable())
-                .map {
-                    it.user = entity
-                    it
-                }
+                    .map {
+                        it.user = entity
+                        it
+                    }
         }
-            .collectList()
-            .zipWith(read.mugiCountByUser(userId))
-            .map { tuple -> PageImpl(tuple.t1, queryPage.fromPageable(), tuple.t2) }
+                .collectList()
+                .zipWith(read.mugiCountByUser(userId))
+                .map { tuple -> PageImpl(tuple.t1, queryPage.fromPageable(), tuple.t2) }
         return ServerResponse.ok()
-            .contentType(MediaType.APPLICATION_JSON)
-            .body(page, Page::class.java)
+                .contentType(MediaType.APPLICATION_JSON)
+                .body(page, Page::class.java)
     }
 
     fun allMugis(request: ServerRequest): Mono<ServerResponse> {
         val queryPage = QueryPage.fromServerResponse(request)
         val matrixVariables = searchMatrixVariable(request)
         val prefix = "mugi"
-        val clazz = Mugi::class
+        val clazz = Record::class
         val whereClause = createNativeWhereClause(prefix, clazz, matrixVariables)
         val (orderSql, limitSql) = createNativeSortLimitClause(prefix, clazz, queryPage)
         val flux =  read.allMugis(whereClause = whereClause, orderClause = orderSql, limitClause = limitSql)
         return ServerResponse.ok()
-            .contentType(MediaType.APPLICATION_JSON)
-            .body(flux, Mugi::class.java)
+                .contentType(MediaType.APPLICATION_JSON)
+                .body(flux, Record::class.java)
     }
 
 }
