@@ -68,6 +68,9 @@
     <content url="file://$MODULE_DIR$/../../dustin/src/test">
       <sourceFolder url="file://$MODULE_DIR$/../../dustin/src/test/kotlin" isTestSource="true" />
     </content>
+    <content url="file://$MODULE_DIR$/../../dustin/src/test">
+      <sourceFolder url="file://$MODULE_DIR$/../../dustin/src/test/kotlin" isTestSource="true" />
+    </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="dustin.main" />

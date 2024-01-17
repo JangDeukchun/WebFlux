@@ -1,7 +1,22 @@
 회사 선임님 깃에 올라가 있는 Spring Webflux(Kotilin)을 무작정 따라해보자 (챕터별로 branch를 나누어 진행한다.)
 
-(프로젝트의 main 브랜치에는 항상 클린코드와 클린아키텍쳐를 두고 참고하자)
+코틀린으로 WebFlux를 사용할 때 스프링 공식 사이트에 보면 코루틴을 이용한 suspend 함수를 통해 구현하는게 최종 목표이다.
 
+환경설정
+macOS M1
+Kotlin 1.8.21 on Java 17
+IDE: IntelliJ
+Spring Boot 3.1.0 WebFlux
+RDBMS: mySql v8.0.33
+build: gradle v8.1.1
+Spring Initializr를 통해서 필요한 라이브러리를 먼저 설정한다.
+
+
+
+
+
+
+-------------------------------------------------------------------------------
 시작하기 앞서 webflux란 무엇인지 알아보자
 WebFlux 란 client, server 에서 reactive 스타일의 어플리케이션의 개발을 도와주는 스프링 모듈입니다. WebFlux 는 기존의 Servlet API를 기반으로 구축된 웹 프레임 워크인 Spring WebMvc 를 대체할 수 있는 웹 프레임워크입니다.(라고 블로그에 적혀 있다)
 
