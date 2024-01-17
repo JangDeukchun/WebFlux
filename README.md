@@ -15,6 +15,10 @@
     ReadMugiSevicTest에서 mugisTEST nullPoint 예외 발생
     ReadMugiRouterTest에서 allmugisTEST nullPoint 예외 발생
 
+    2024/01/17
+    ReadMugiSevicTest에서 mugisTEST nullPoint 예외 해결 (조인된 테이블에 대한 데이터를 컨버터를 통해 매핑해줘야함)
+    ReadMugiRouterTest에서 allmugisTEST nullPoint 예외 해결 (컨버터 오타)
+````
 
 
 

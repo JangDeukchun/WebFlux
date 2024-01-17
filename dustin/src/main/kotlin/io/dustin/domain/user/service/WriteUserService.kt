@@ -19,4 +19,6 @@ class WriteUserService(
         return userRepository.updateUser(user, assignments)
     }
 
+
+
 }

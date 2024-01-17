@@ -51,13 +51,13 @@ class ReadMugiHandler(
         val queryPage = QueryPage.fromServerResponse(request)
         val matrixVariables = searchMatrixVariable(request)
         val prefix = "mugi"
-        val clazz = Record::class
+        val clazz = Mugi::class
         val whereClause = createNativeWhereClause(prefix, clazz, matrixVariables)
         val (orderSql, limitSql) = createNativeSortLimitClause(prefix, clazz, queryPage)
         val flux =  read.allMugis(whereClause = whereClause, orderClause = orderSql, limitClause = limitSql)
         return ServerResponse.ok()
                 .contentType(MediaType.APPLICATION_JSON)
-                .body(flux, Record::class.java)
+                .body(flux, Mugi::class.java)
     }
 
 }
